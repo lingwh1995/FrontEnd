@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta charset="UTF-8">	
+	<script>
+		//创建对象
+		var person = {
+			name:'zhangsan',
+			age:18,
+			school:'ufe'			
+		};
+		
+		/**
+		 * 序列化
+		 */
+		//对象==》json字符串
+			//方式一:JSON.stringify(obj)
+		console.log(JSON.stringify(person));	
+		console.log(person);
+		
+		/**
+		 * 反序列化
+		 */
+		 //json字符串==》对象
+			//方式一:eval("("+str1+")")
+		 var str1 = '{ "name": "cxh", "sex": "man" }'; 
+		 var obj1 =eval("("+str1+")");
+		 console.log(obj1);
+			//方式二:JSON.parse(str1)
+		 var obj2 =  JSON.parse(str1);
+		 console.log(obj2);
+    </script>
+</head>
+<body>
+	
+</body>
+</html>

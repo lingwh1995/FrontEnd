@@ -1,0 +1,38 @@
+<html>
+<head>
+	<meta charset="UTF-8">	
+	<script>
+		/**
+		 * js中的对象
+		 */
+		//创建对象
+		var person = {
+			name:'zhangsan',
+			age:18,
+			school:'ufe',
+			eat:function(name){
+				var that = this;
+				console.log(that.name+'在吃东西......');
+			}
+		};
+		console.log('姓名 :'+person.name);
+		console.log('学校 :'+person['school']);
+		console.log('年龄 :'+person.age);
+		//删除对象中的属性
+		delete person.age,
+		console.log('年龄 :'+person.age);
+		//给对象增加属性
+		person.hobby = 'swim';
+		console.log(person.hobby);
+		//判断对象是不是拥有某一属性
+		console.log('xxx' in person);
+		console.log('name' in person);
+		
+		//调用对象中的方法
+		person.eat();
+    </script>
+</head>
+<body>
+	
+</body>
+</html>
